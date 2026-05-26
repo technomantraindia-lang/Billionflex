@@ -160,35 +160,45 @@ if (window.matchMedia('(pointer: fine)').matches) {
 }
 
 const accordionItems = $$('.accordion-item');
-
-if (accordionItems.length && !window.matchMedia('(hover: hover)').matches) {
-  if (!accordionItems.some(item => item.classList.contains('active'))) {
-    accordionItems[0].classList.add('active');
-  }
-  accordionItems.forEach(item => {
-    item.addEventListener('click', () => {
-      accordionItems.forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
-    });
-  });
-}
-
 const sliderImages = $$('.slider-track img');
 const sliderDots = $$('.slider-dots button');
 let slideIndex = 0;
+
 const showSlide = (index) => {
   if (!sliderImages.length) return;
   sliderImages.forEach((img, i) => img.classList.toggle('active', i === index));
   sliderDots.forEach((dot, i) => dot.classList.toggle('active', i === index));
 };
+
+const setCapabilitiesState = (index) => {
+  if (accordionItems.length) {
+    const activeAccordionIndex = Math.min(index, accordionItems.length - 1);
+    accordionItems.forEach((item, i) => item.classList.toggle('active', i === activeAccordionIndex));
+  }
+  slideIndex = index;
+  showSlide(slideIndex);
+};
+
+if (accordionItems.length) {
+  const prePressIndex = accordionItems.findIndex(item =>
+    /pre-?press optimization/i.test(item.textContent || '')
+  );
+  const defaultIndex = prePressIndex >= 0 ? prePressIndex : 0;
+  setCapabilitiesState(defaultIndex);
+
+  accordionItems.forEach((item, index) => {
+    item.addEventListener('click', () => setCapabilitiesState(index));
+  });
+}
+
 if (sliderImages.length) {
+  if (!accordionItems.length) showSlide(slideIndex);
   setInterval(() => {
     slideIndex = (slideIndex + 1) % sliderImages.length;
-    showSlide(slideIndex);
+    setCapabilitiesState(slideIndex);
   }, 2800);
   sliderDots.forEach((dot, index) => dot.addEventListener('click', () => {
-    slideIndex = index;
-    showSlide(slideIndex);
+    setCapabilitiesState(index);
   }));
 }
 
@@ -215,4 +225,3 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
   });
 }, observerOptions);
 $$('.reveal').forEach(el => revealObserver.observe(el));
-
