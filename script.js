@@ -225,3 +225,20 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
   });
 }, observerOptions);
 $$('.reveal').forEach(el => revealObserver.observe(el));
+
+// About page history axis glow: activate only while row is in view
+const historyRows = $$('.history-luxe-row');
+if (historyRows.length) {
+  const historyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const shouldGlow = entry.isIntersecting && entry.intersectionRatio >= 0.25;
+      entry.target.classList.toggle('is-active', shouldGlow);
+    });
+  }, {
+    root: null,
+    rootMargin: '-14% 0px -14% 0px',
+    threshold: [0, 0.15, 0.25, 0.5]
+  });
+
+  historyRows.forEach(row => historyObserver.observe(row));
+}

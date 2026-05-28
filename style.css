@@ -241,3 +241,77 @@
     right: auto;
   }
 }
+
+/* About Page Custom */
+.about-page{background:#030303}
+.about-page .about-hero{min-height:100vh;padding:120px 0 0;position:relative;overflow:hidden;background:#000}
+.about-page .about-hero-bg-lines,.about-page .about-hero-glow,.about-page .about-hero-overlay,.about-page .about-hero-content,.about-page .about-hero-chip{display:none!important}
+.about-page .about-hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;animation:none!important;transform:none!important}
+.about-page .about-impact{background:transparent;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-page .about-impact-wrap{max-width:1200px;margin:auto;padding:0 24px}
+.about-page .about-section-title{text-align:center;margin-bottom:36px}
+.about-page .about-impact-stats{max-width:none;margin-top:0}
+.about-page .about-impact-stats div{background:rgba(18,18,18,.72);border:1px solid rgba(255,255,255,.15)}
+.about-page .about-mission,.about-page .about-infrastructure{background:transparent;border-bottom:1px solid var(--line)}
+.about-page .about-card-grid{display:grid;gap:18px;margin-top:26px}
+.about-page .about-story-card{border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:20px;background:rgba(10,10,10,.82)}
+.about-page .about-story-card h3{color:var(--gold);font-size:20px;margin-bottom:8px}
+.about-page .about-story-card p{color:#d0d0d0;margin-top:0}
+.about-page .about-showcase-image-wrap{margin-top:0;align-self:center}
+.about-page .about-showcase-image{height:500px;border-radius:30px;border:1px solid rgba(255,255,255,.16);object-fit:cover}
+.about-page .about-mission .about-showcase-image{object-fit:contain;padding:16px;background:rgba(6,6,6,.9)}
+.about-page .about-infrastructure .showcase-gallery{order:2}
+.about-page .about-infrastructure .showcase-copy{order:1}
+
+/* History Final */
+.about-page .about-timeline{background:#030303;border-top:1px solid var(--line);padding-top:88px;padding-bottom:96px}
+.about-page .about-timeline-head{max-width:900px;margin:0 auto 48px;padding:0 24px;text-align:center}
+.about-page .about-timeline-head,.about-page .about-timeline-head h2,.about-page .about-timeline-head p,.about-page .about-timeline-head .eyebrow{text-align:center}
+.about-page .about-timeline-head .eyebrow{justify-content:center}
+.about-page .history-luxe{--tl-gold:#c8ab5a;--tl-gold-soft:rgba(200,171,90,.34);--tl-line:rgba(200,171,90,.28);--tl-card:rgba(10,10,10,.94);max-width:1260px;margin:0 auto;padding:8px 20px 0;display:grid;gap:18px;position:relative}
+.about-page .history-luxe-axis{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:2px;background:linear-gradient(180deg,rgba(200,171,90,.12),var(--tl-line),rgba(200,171,90,.12));box-shadow:none}
+.about-page .history-luxe-row{min-height:124px;display:grid;grid-template-columns:1fr 1fr;align-items:center;position:relative}
+.about-page .history-luxe-row.left .history-luxe-card{grid-column:1;justify-self:end;margin-right:56px}
+.about-page .history-luxe-row.right .history-luxe-card{grid-column:2;justify-self:start;margin-left:56px}
+.about-page .history-luxe-row.center .history-luxe-card{grid-column:1/3;justify-self:center;margin-top:6px}
+.about-page .history-luxe-card{width:min(100%,470px);padding:20px 22px;border:1px solid var(--tl-gold-soft);border-radius:18px;background:var(--tl-card);box-shadow:0 10px 24px rgba(0,0,0,.35);position:relative;transition:border-color .24s var(--ease),box-shadow .24s var(--ease)}
+.about-page .history-luxe-card h3{margin:0 0 8px;font-family:var(--font-head);font-size:clamp(30px,3.4vw,42px);line-height:1;color:var(--tl-gold);letter-spacing:-.02em}
+.about-page .history-luxe-card p{margin:0;font-family:var(--font-body);font-size:15px;line-height:1.58;color:#d6d6d6;max-width:34ch}
+.about-page .history-luxe-dot{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:#121212;border:2px solid var(--tl-line);box-shadow:none;transition:all .24s var(--ease);z-index:3}
+.about-page .history-luxe-row.is-active .history-luxe-dot{background:var(--tl-gold);border-color:var(--tl-gold);box-shadow:0 0 0 6px rgba(200,171,90,.1),0 0 15px rgba(200,171,90,.34)}
+.about-page .history-luxe-row.left .history-luxe-card::after,.about-page .history-luxe-row.right .history-luxe-card::before{content:"";position:absolute;top:50%;width:34px;height:1px;background:rgba(200,171,90,.42);transform:translateY(-50%)}
+.about-page .history-luxe-row.left .history-luxe-card::after{right:-34px}
+.about-page .history-luxe-row.right .history-luxe-card::before{left:-34px}
+.about-page .history-luxe-row.center .history-luxe-card::before,.about-page .history-luxe-row.center .history-luxe-card::after{display:none}
+.about-page .history-luxe-row.is-active .history-luxe-card{border-color:rgba(200,171,90,.58);box-shadow:0 14px 28px rgba(200,171,90,.07)}
+.about-page .history-luxe-icon{display:none!important}
+
+.about-page .about-cta{background:transparent;border-top:1px solid var(--line)}
+.about-page .about-cta-card{grid-template-columns:1fr;text-align:center;min-height:auto;padding:56px 28px;background:#040404}
+.about-page .about-cta-card .service-copy{max-width:760px;margin:auto}
+
+@media (max-width:1100px){
+  .about-page .about-hero{min-height:88vh}
+  .about-page .about-showcase-image{height:440px}
+  .about-page .about-infrastructure .showcase-gallery,.about-page .about-infrastructure .showcase-copy{order:initial}
+  .about-page .history-luxe{max-width:980px}
+  .about-page .history-luxe-card{width:min(100%,400px)}
+}
+
+@media (max-width:760px){
+  .about-page .about-hero{min-height:66vh;padding-top:92px}
+  .about-page .about-impact-wrap{padding:0 6px}
+  .about-page .about-showcase-image{height:300px;border-radius:22px}
+  .about-page .history-luxe{padding:2px 8px 0;gap:10px}
+  .about-page .history-luxe-axis{left:16px;transform:none}
+  .about-page .history-luxe-row{grid-template-columns:1fr;min-height:96px}
+  .about-page .history-luxe-dot{left:16px}
+  .about-page .history-luxe-row.left .history-luxe-card,.about-page .history-luxe-row.right .history-luxe-card,.about-page .history-luxe-row.center .history-luxe-card{grid-column:1;justify-self:stretch;width:auto;margin:0 0 0 34px;border-radius:14px;padding:15px 14px}
+  .about-page .history-luxe-row.left .history-luxe-card::after,.about-page .history-luxe-row.right .history-luxe-card::before{left:-18px;right:auto;width:18px}
+  .about-page .history-luxe-card h3{font-size:clamp(26px,8vw,34px)}
+  .about-page .history-luxe-card p{font-size:14px;max-width:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .about-page .history-luxe-row,.about-page .history-luxe-dot,.about-page .history-luxe-card{transition:none!important}
+}

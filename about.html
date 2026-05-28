@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="about-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="preloader" aria-hidden="true">
     <div class="loader-mark">BF</div>
@@ -44,28 +44,21 @@
   </header>
 
   <main id="main-content">
-    <!-- Welcome Section (Hero) -->
-    <section class="hero banner-hero" data-theme="light" style="padding-top: 180px; padding-bottom: 60px;">
-      <div class="section-heading compact reveal" style="max-width: 900px; padding: 0 24px; margin: auto; text-align: center;">
-        <p class="eyebrow" style="justify-content: center;"><span></span> Welcome to billionflex</p>
-        <h1 style="text-align: center; font-size: clamp(38px, 5.5vw, 68px); margin-bottom: 24px;">Innovating Packaging. Empowering Brands.</h1>
-        <p style="text-align: center; font-size: 18px; max-width: 760px; margin: auto; color: #bdbdbd; line-height: 1.75; margin-bottom: 24px;">
-          Billion Flex is your one-stop solution for cutting-edge print and packaging. As a full-service supplier, we offer advanced pre-press, press, and finishing technologies, backed by decades of industry experience and technical know-how.
-        </p>
-        <p style="text-align: center; font-size: 18px; max-width: 760px; margin: auto; color: #bdbdbd; line-height: 1.75;">
-          We specialize in delivering innovative, market-ready packaging solutions that elevate shelf presence and optimize cost. Whether it’s bold designs, sustainable materials, or advanced coatings, our mission is to meet tomorrow’s packaging needs—today.
-        </p>
-      </div>
+    <section class="hero banner-hero about-hero" data-theme="light">
+      <div class="about-hero-bg-lines" aria-hidden="true"></div>
+      <div class="about-hero-glow about-hero-glow-one" aria-hidden="true"></div>
+      <div class="about-hero-glow about-hero-glow-two" aria-hidden="true"></div>
+      <img class="about-hero-image" src="images and videos/about hero .png" alt="Billion Flex creative packaging showcase" />
+      <div class="about-hero-overlay" aria-hidden="true"></div>
     </section>
 
-    <!-- Metrics Section -->
-    <section class="intro section-pad" style="padding-top: 20px; padding-bottom: 60px; background: #050505; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-      <div class="reveal" style="max-width: 1200px; margin: auto; padding: 0 24px;">
-        <div style="text-align: center; margin-bottom: 40px;">
-          <h2 style="font-size: 36px; margin-bottom: 12px;">Our Impact</h2>
-          <p style="color: #a0a0a0; font-size: 16px;">Built on Experience. Driven by Results.</p>
+    <section class="intro section-pad about-impact">
+      <div class="reveal about-impact-wrap">
+        <div class="about-section-title">
+          <h2>Our Impact</h2>
+          <p>Built on Experience. Driven by Results.</p>
         </div>
-        <div class="hero-stats" style="margin-top: 0; max-width: none;">
+        <div class="hero-stats about-impact-stats">
           <div>
             <strong>40+</strong>
             <span>Years of Experience</span>
@@ -86,199 +79,137 @@
       </div>
     </section>
 
-    <!-- Mission & Vision Section -->
-    <section class="showcase section-pad" id="mission-vision" style="background: #000000; border-bottom: 1px solid var(--line);">
+    <section class="showcase section-pad about-mission" id="mission-vision">
       <div class="showcase-copy reveal">
         <p class="eyebrow"><span></span> Purpose & Direction</p>
         <h2 class="showcase-lead-heading">Our Mission & Vision</h2>
-        <div style="margin-top: 30px; display: grid; gap: 30px;">
-          <div style="background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 24px; box-shadow: var(--shadow-soft);">
-            <h3 style="color: var(--gold); font-size: 20px; margin-bottom: 10px;">Our Mission</h3>
-            <p style="color: #cfcfcf; line-height: 1.6; font-size: 15px;">To meet tomorrow’s packaging needs—today. We specialize in delivering innovative, market-ready packaging solutions that elevate shelf presence, optimize cost, and champion sustainable, high-quality materials.</p>
-          </div>
-          <div style="background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 24px; box-shadow: var(--shadow-soft);">
-            <h3 style="color: var(--gold); font-size: 20px; margin-bottom: 10px;">Our Vision</h3>
-            <p style="color: #cfcfcf; line-height: 1.6; font-size: 15px;">To be the global benchmark for print and packaging excellence, driving brand success through advanced engineering, environmental sustainability, and customer trust.</p>
-          </div>
+        <div class="about-card-grid">
+          <article class="about-story-card">
+            <h3>Our Mission</h3>
+            <p>To meet tomorrow's packaging needs-today. We specialize in delivering innovative, market-ready packaging solutions that elevate shelf presence, optimize cost, and champion sustainable, high-quality materials.</p>
+          </article>
+          <article class="about-story-card">
+            <h3>Our Vision</h3>
+            <p>To be the global benchmark for print and packaging excellence, driving brand success through advanced engineering, environmental sustainability, and customer trust.</p>
+          </article>
         </div>
       </div>
-      <div class="showcase-gallery reveal delay-1" style="margin-top: 0;">
-        <img class="gallery-main" src="images and videos/office image.png" alt="Billion Flex Facility Office" style="height: 480px; width: 100%; object-fit: cover; border-radius: 40px;" />
+      <div class="showcase-gallery reveal delay-1 about-showcase-image-wrap">
+        <img class="gallery-main about-showcase-image" src="images and videos/missionvission.png" alt="Billion Flex Mission and Vision" />
       </div>
     </section>
 
-    <!-- Infrastructure Section -->
-    <section class="showcase section-pad" id="infrastructure" style="background: #050505; border-bottom: 1px solid var(--line);">
-      <div class="showcase-gallery reveal" style="margin-top: 0; order: 2;">
-        <img class="gallery-main" src="images and videos/gallery_main.png" alt="Billion Flex Advanced Manufacturing Infrastructure" style="height: 480px; width: 100%; object-fit: cover; border-radius: 40px;" />
+    <section class="showcase section-pad about-infrastructure" id="infrastructure">
+      <div class="showcase-gallery reveal about-showcase-image-wrap">
+        <img class="gallery-main about-showcase-image" src="images and videos/machine .png" alt="Billion Flex Advanced Manufacturing Infrastructure" />
       </div>
-      <div class="showcase-copy reveal delay-1" style="order: 1;">
+      <div class="showcase-copy reveal delay-1">
         <p class="eyebrow"><span></span> Infrastructure</p>
         <h2 class="showcase-lead-heading">Advanced Infrastructure for Quality Packaging</h2>
-        <p style="color: #cfcfcf; line-height: 1.75; font-size: 16px; margin-top: 18px;">
+        <p>
           Our advanced manufacturing facility is equipped with cutting-edge technology, enabling precision, efficiency, and unmatched quality in every packaging solution we create. From high-speed printing and lamination to automated cutting and sealing, our infrastructure ensures seamless production while maintaining the highest industry standards.
         </p>
-        <p style="color: #cfcfcf; line-height: 1.75; font-size: 16px; margin-top: 12px;">
+        <p>
           With a strong focus on innovation and sustainability, we continuously upgrade our processes to deliver world-class packaging solutions that meet the evolving needs of our clients.
         </p>
       </div>
     </section>
 
-    <!-- History Timeline Section -->
-    <section class="timeline-section" id="history">
-      <div class="section-heading compact reveal" style="max-width: 900px; padding: 0 24px; margin: auto; text-align: center; margin-bottom: 60px;">
-        <p class="eyebrow" style="justify-content: center;"><span></span> Our Journey</p>
-        <h2 style="text-align: center;">Our History</h2>
-        <p style="text-align: center; max-width: 600px; margin: auto; color: #a0a0a0;">Decades of pioneering innovations and excellence in the printing and packaging industry.</p>
+    <section class="timeline-section about-timeline" id="history">
+      <div class="section-heading compact reveal about-timeline-head">
+        <p class="eyebrow"><span></span> Our Journey</p>
+        <h2>Our History</h2>
+        <p>Decades of pioneering innovations and excellence in the printing and packaging industry.</p>
       </div>
 
-      <div class="timeline-container">
-        <!-- Item 1: 1970 -->
-        <div class="timeline-item left reveal reveal-left">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">1970</div>
-            <div class="timeline-text">First and the only company to manufacture plastic bags in Baroda, India.</div>
-          </div>
-        </div>
+      <div class="history-luxe">
+        <div class="history-luxe-axis" aria-hidden="true"></div>
 
-        <!-- Item 2: 1974 -->
-        <div class="timeline-item right reveal reveal-right">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">1974</div>
-            <div class="timeline-text">Contacted by Government of India to manufacture customized bag sheets for forest department.</div>
-          </div>
-        </div>
-
-        <!-- Item 3: 1986 -->
-        <div class="timeline-item left reveal reveal-left">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">1986</div>
-            <div class="timeline-text">Billion Flex (India) Pvt. Ltd. enters the market.</div>
-          </div>
-        </div>
-
-        <!-- Item 4: 1987 -->
-        <div class="timeline-item right reveal reveal-right">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">1987</div>
-            <div class="timeline-text">Multicolor carry bags with upto 12 colors printing introduced in India for the first time.</div>
-          </div>
-        </div>
-
-        <!-- Item 5: 1992 -->
-        <div class="timeline-item left reveal reveal-left">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">1992</div>
-            <div class="timeline-text">Multicolor carry bags with centrally aligned printing in side gusset for the first time in India.</div>
-          </div>
-        </div>
-
-        <!-- Item 6: 1994 -->
-        <div class="timeline-item right reveal reveal-right">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">1994</div>
-            <div class="timeline-text">Enters the global markets of Middle East, Africa, Europe.</div>
-          </div>
-        </div>
-
-        <!-- Item 7: 1995 -->
-        <div class="timeline-item left reveal reveal-left">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">1995</div>
-            <div class="timeline-text">Introduces modern handles for carry bags like European soft loop handle, reinforced patch handle and variety of die cut handles.</div>
-          </div>
-        </div>
-
-        <!-- Item 8: 1996 -->
-        <div class="timeline-item right reveal reveal-right">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">1996</div>
-            <div class="timeline-text">Introduces in-house specialized box type carry bags with cord, rivettes, and cardboard reinforcements.</div>
-          </div>
-        </div>
-
-        <!-- Item 9: 1997 -->
-        <div class="timeline-item left reveal reveal-left">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">1997</div>
-            <div class="timeline-text">Sets up an advanced Shrink Sleeves manufacturing in house facility.</div>
-          </div>
-        </div>
-
-        <!-- Item 10: 2001 -->
-        <div class="timeline-item right reveal reveal-right">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2001</div>
-            <div class="timeline-text">Sets up highly sophisticated 8 color rot gravure printing press.</div>
-          </div>
-        </div>
-
-        <!-- Item 11: 2003 -->
-        <div class="timeline-item left reveal reveal-left">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2003</div>
-            <div class="timeline-text">Sets up computerized injection molding machines for making of rigid handles in-house.</div>
-          </div>
-        </div>
-
-        <!-- Item 12: 2004 -->
-        <div class="timeline-item right reveal reveal-right">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2004</div>
-            <div class="timeline-text">Enter the global market of North America.</div>
-          </div>
-        </div>
-
-        <!-- Item 13: 2009 -->
-        <div class="timeline-item left reveal reveal-left">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2009</div>
-            <div class="timeline-text">Inauguration of Global office in United States.</div>
-          </div>
-        </div>
-
-        <!-- Item 14: 2010 -->
-        <div class="timeline-item right reveal reveal-right">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2010</div>
-            <div class="timeline-text">Acquired and installed state-of-art 9-color and 10-color roto gravure printing presses.</div>
-          </div>
-        </div>
-
-        <!-- Item 15: 2015 -->
-        <div class="timeline-item left reveal reveal-left">
-          <div class="timeline-node"></div>
-          <div class="timeline-content">
-            <div class="timeline-year">2015</div>
-            <div class="timeline-text">Launch Tamper proof Courier Bags/E-commerce Bags as a new products.</div>
-          </div>
-        </div>
+        <article class="history-luxe-row left reveal reveal-left">
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>1970</h3><p>First and the only company to manufacture plastic bags in Baroda, India.</p></div>
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row right reveal reveal-right">
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>1974</h3><p>Contacted by Government of India to manufacture customized bag sheets for forest department.</p></div>
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row left reveal reveal-left">
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>1986</h3><p>Billion Flex (India) Pvt. Ltd. enters the market.</p></div>
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row right reveal reveal-right">
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>1987</h3><p>Multicolor carry bags with upto 12 colors printing introduced in India for the first time.</p></div>
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row left reveal reveal-left">
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>1992</h3><p>Multicolor carry bags with centrally aligned printing in side gusset for the first time in India.</p></div>
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row right reveal reveal-right">
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>1994</h3><p>Enters the global markets of Middle East, Africa, Europe.</p></div>
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row left reveal reveal-left">
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>1995</h3><p>Introduces modern handles for carry bags like European soft loop handle, reinforced patch handle and variety of die cut handles.</p></div>
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row right reveal reveal-right">
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>1996</h3><p>Introduces in-house specialized box type carry bags with cord, rivettes, and cardboard reinforcements.</p></div>
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row left reveal reveal-left">
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>1997</h3><p>Sets up an advanced Shrink Sleeves manufacturing in house facility.</p></div>
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row right reveal reveal-right">
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>2001</h3><p>Sets up highly sophisticated 8 color rot gravure printing press.</p></div>
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row left reveal reveal-left">
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>2003</h3><p>Sets up computerized injection molding machines for making of rigid handles in-house.</p></div>
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row right reveal reveal-right">
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>2004</h3><p>Enter the global market of North America.</p></div>
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row left reveal reveal-left">
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>2009</h3><p>Inauguration of Global office in United States.</p></div>
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row right reveal reveal-right">
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>2010</h3><p>Acquired and installed state-of-art 9-color and 10-color roto gravure printing presses.</p></div>
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+        </article>
+        <article class="history-luxe-row center reveal reveal-scale">
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>2015</h3><p>Launch Tamper proof Courier Bags/E-commerce Bags as a new products.</p></div>
+        </article>
       </div>
     </section>
 
-    <!-- Connect CTA Section -->
-    <section class="service-banner section-pad" style="background: #000; border-top: 1px solid var(--line);">
-      <div class="service-card reveal" style="grid-template-columns: 1fr; text-align: center; min-height: auto; padding: 60px 40px;">
-        <div class="service-copy" style="max-width: 720px; margin: auto;">
-          <h2 style="font-size: clamp(28px, 4vw, 48px); line-height: 1.15;">Let's Build Something Great Together</h2>
-          <p style="margin: 20px 0 32px; font-size: 16px;">
+    <section class="service-banner section-pad about-cta">
+      <div class="service-card reveal about-cta-card">
+        <div class="service-copy">
+          <h2>Let's Build Something Great Together</h2>
+          <p>
             Partner with Billion Flex for custom packaging layouts, fast shipping mailers, and top-tier rotogravure outputs.
           </p>
-          <a href="index.html#contact" class="btn btn-light magnetic" style="margin: auto;">Contact Us</a>
+          <a href="index.html#contact" class="btn btn-light magnetic">Contact Us</a>
         </div>
       </div>
     </section>
@@ -385,13 +316,13 @@
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3"/>
+              <circle cx="12" cy="10" r="3" />
             </svg></span><span>54/1-B,54/1-C, Yashkamal Industrial Estate, Baska-Tajpura Road, Village: Panelav, Taluka:
             Halol, Dist: Panchmahal - 389350, Gujarat, India</span></div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Billion Flex. All rights reserved.</p>
+      <p>&copy; 2026 Billion Flex. All rights reserved.</p>
       <p>Design by Technomantra India</p>
     </div>
   </footer>
