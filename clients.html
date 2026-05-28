@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Clients - Billion Flex</title>
+  <meta name="description"
+    content="Trusted by national and international industry leaders. Explore our diverse client partners across retail, healthcare, e-commerce, and FMCG sectors." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .clients-hero {
+      padding: 180px max(24px, calc((100vw - 1500px)/2)) 80px;
+      background: linear-gradient(180deg, #070707 0%, #000 100%);
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+    }
+    .clients-hero h1 {
+      font-size: clamp(38px, 4vw, 56px);
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .clients-hero p.subtitle {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #a0a0a0;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+    .clients-filter-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 24px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .client-card-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 24px;
+      aspect-ratio: 1.5;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      transition: transform 0.45s var(--ease), border-color 0.45s var(--ease), box-shadow 0.45s var(--ease);
+      will-change: transform;
+    }
+    .client-card-item img {
+      max-width: 130px;
+      max-height: 55px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: none;
+      transition: transform 0.4s var(--ease);
+    }
+    .client-card-item span.client-sector {
+      margin-top: 16px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #666;
+      transition: color 0.4s;
+    }
+    @media (hover: hover) {
+      .client-card-item:hover {
+        transform: translateY(-6px);
+        border-color: var(--gold);
+        box-shadow: 0 20px 45px rgba(255, 210, 0, 0.15);
+      }
+      .client-card-item:hover img {
+        transform: scale(1.06);
+      }
+      .client-card-item:hover span.client-sector {
+        color: #b5912a;
+      }
+    }
+    @media (max-width: 640px) {
+      .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .client-card-item {
+        padding: 20px 12px;
+        aspect-ratio: 1.3;
+        border-radius: 16px;
+      }
+      .client-card-item img {
+        max-width: 100px;
+        max-height: 40px;
+      }
+      .client-card-item span.client-sector {
+        margin-top: 10px;
+        font-size: 9px;
+      }
+    }
+  </style>
+</head>
+
+<body class="clients-page-view">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="preloader" aria-hidden="true">
+    <div class="loader-mark">BF</div>
+    <p>Billion Flex is loading</p>
+  </div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar">
+      <a class="brand" href="index.html#top" aria-label="Billion Flex Home">
+        <img src="images and videos/new logo.png" alt="Billion Flex Logo" />
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-menu">
+        <a href="index.html#home">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Products</a>
+        <a href="clients.html" class="active">Clients</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <a class="btn btn-dark nav-cta magnetic" href="contact.html"><span>Contact Us</span></a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="clients-hero">
+      <span class="eyebrow" style="color: var(--gold);"><span></span> Trusted Globally</span>
+      <h1>Our Valued Clients & Partners</h1>
+      <p class="subtitle">We take pride in partnering with major national and international brands, delivering top-tier print and packaging solutions that meet the highest standards.</p>
+
+      <div class="clients-filter-container reveal">
+        <div class="filter-tabs" role="tablist" aria-label="Client categories">
+          <button class="active magnetic" data-filter="all">All Sectors</button>
+          <button class="magnetic" data-filter="retail">Retail & Fashion</button>
+          <button class="magnetic" data-filter="fmcg">Food & FMCG</button>
+          <button class="magnetic" data-filter="pharma">Healthcare & Pharma</button>
+          <button class="magnetic" data-filter="industrial">Industrial & Tech</button>
+        </div>
+      </div>
+
+      <div class="clients-grid reveal delay-1">
+        <!-- Retail & Fashion -->
+        <article class="client-card-item product-card tilt-card" data-category="retail">
+          <img src="images and videos/clients/arvind.png" alt="Arvind" />
+          <span class="client-sector">Retail & Fashion</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="retail">
+          <img src="images and videos/clients/fastrack.png" alt="Fastrack" />
+          <span class="client-sector">Retail & Fashion</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="retail">
+          <img src="images and videos/clients/jadeblue.png" alt="Jade Blue" />
+          <span class="client-sector">Retail & Fashion</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="retail">
+          <img src="images and videos/clients/lime road.png" alt="Lime Road" />
+          <span class="client-sector">Retail & Fashion</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="retail">
+          <img src="images and videos/clients/manyavar.png" alt="Manyavar" />
+          <span class="client-sector">Retail & Fashion</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="retail">
+          <img src="images and videos/clients/max.png" alt="Max" />
+          <span class="client-sector">Retail & Fashion</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="retail">
+          <img src="images and videos/clients/myntra.png" alt="Myntra" />
+          <span class="client-sector">Retail & Fashion</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="retail">
+          <img src="images and videos/clients/nike.png" alt="Nike" />
+          <span class="client-sector">Retail & Fashion</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="retail">
+          <img src="images and videos/clients/titan.png" alt="Titan" />
+          <span class="client-sector">Retail & Fashion</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="retail">
+          <img src="images and videos/clients/woodland.png" alt="Woodland" />
+          <span class="client-sector">Retail & Fashion</span>
+        </article>
+
+        <!-- Food & FMCG -->
+        <article class="client-card-item product-card tilt-card" data-category="fmcg">
+          <img src="images and videos/clients/cafecoffe day.png" alt="Cafe Coffee Day" />
+          <span class="client-sector">Food & FMCG</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="fmcg">
+          <img src="images and videos/clients/mtr.png" alt="MTR" />
+          <span class="client-sector">Food & FMCG</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="fmcg">
+          <img src="images and videos/clients/parle.png" alt="Parle" />
+          <span class="client-sector">Food & FMCG</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="fmcg">
+          <img src="images and videos/clients/himalaya.png" alt="Himalaya" />
+          <span class="client-sector">Food & FMCG</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="fmcg">
+          <img src="images and videos/clients/garnier.png" alt="Garnier" />
+          <span class="client-sector">Food & FMCG</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="fmcg">
+          <img src="images and videos/clients/loreal.png" alt="L'Oreal" />
+          <span class="client-sector">Food & FMCG</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="fmcg">
+          <img src="images and videos/clients/nivea.png" alt="Nivea" />
+          <span class="client-sector">Food & FMCG</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="fmcg">
+          <img src="images and videos/clients/oriflame.png" alt="Oriflame" />
+          <span class="client-sector">Food & FMCG</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="fmcg">
+          <img src="images and videos/clients/cuticura.png" alt="Cuticura" />
+          <span class="client-sector">Food & FMCG</span>
+        </article>
+
+        <!-- Healthcare & Pharma -->
+        <article class="client-card-item product-card tilt-card" data-category="pharma">
+          <img src="images and videos/clients/alembic.png" alt="Alembic" />
+          <span class="client-sector">Healthcare & Pharma</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="pharma">
+          <img src="images and videos/clients/nagarjuna.png" alt="Nagarjuna" />
+          <span class="client-sector">Healthcare & Pharma</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="pharma">
+          <img src="images and videos/clients/ranbaxy.png" alt="Ranbaxy" />
+          <span class="client-sector">Healthcare & Pharma</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="pharma">
+          <img src="images and videos/clients/zydus.png" alt="Zydus" />
+          <span class="client-sector">Healthcare & Pharma</span>
+        </article>
+
+        <!-- Industrial & Tech -->
+        <article class="client-card-item product-card tilt-card" data-category="industrial">
+          <img src="images and videos/clients/camlin.png" alt="Camlin" />
+          <span class="client-sector">Industrial & Tech</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="industrial">
+          <img src="images and videos/clients/goorej.png" alt="Godrej" />
+          <span class="client-sector">Industrial & Tech</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="industrial">
+          <img src="images and videos/clients/icon.png" alt="Icon" />
+          <span class="client-sector">Industrial & Tech</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="industrial">
+          <img src="images and videos/clients/novino.png" alt="Novino" />
+          <span class="client-sector">Industrial & Tech</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="industrial">
+          <img src="images and videos/clients/oupont.png" alt="DuPont" />
+          <span class="client-sector">Industrial & Tech</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="industrial">
+          <img src="images and videos/clients/reynolds.png" alt="Reynolds" />
+          <span class="client-sector">Industrial & Tech</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="industrial">
+          <img src="images and videos/clients/wipro.png" alt="Wipro" />
+          <span class="client-sector">Industrial & Tech</span>
+        </article>
+        <article class="client-card-item product-card tilt-card" data-category="industrial">
+          <img src="images and videos/clients/cello.png" alt="Cello" />
+          <span class="client-sector">Industrial & Tech</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Trust Statistics Section -->
+    <section class="about-impact section-pad reveal" style="border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #050505;">
+      <div class="about-impact-wrap">
+        <div class="about-section-title" style="text-align: center; margin-bottom: 40px;">
+          <span class="eyebrow" style="color: var(--gold); justify-content: center; display: inline-flex;"><span></span> Our Scale & Scope</span>
+          <h2 style="font-size: clamp(30px, 4vw, 48px); font-weight: 900; color: #fff; margin-top: 10px;">Partnerships Built on Trust & Capacity</h2>
+        </div>
+        <div class="hero-stats about-impact-stats" style="max-width: none; margin-top: 0; gap: 20px;">
+          <div style="background: rgba(20,20,20,.68); border: 1px solid rgba(255,255,255,.08); border-radius: 22px; padding: 24px; text-align: center; backdrop-filter: blur(18px);">
+            <strong style="font-size: clamp(28px, 3.5vw, 44px); color: var(--gold); display: block; font-weight: 800;">40+</strong>
+            <span style="display: block; color: #aaa; font-weight: 800; font-size: 13px; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.05em;">Years of Excellence</span>
+          </div>
+          <div style="background: rgba(20,20,20,.68); border: 1px solid rgba(255,255,255,.08); border-radius: 22px; padding: 24px; text-align: center; backdrop-filter: blur(18px);">
+            <strong style="font-size: clamp(28px, 3.5vw, 44px); color: var(--gold); display: block; font-weight: 800;">98%+</strong>
+            <span style="display: block; color: #aaa; font-weight: 800; font-size: 13px; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.05em;">Client Retention</span>
+          </div>
+          <div style="background: rgba(20,20,20,.68); border: 1px solid rgba(255,255,255,.08); border-radius: 22px; padding: 24px; text-align: center; backdrop-filter: blur(18px);">
+            <strong style="font-size: clamp(28px, 3.5vw, 44px); color: var(--gold); display: block; font-weight: 800;">25+</strong>
+            <span style="display: block; color: #aaa; font-weight: 800; font-size: 13px; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.05em;">Countries Supplied</span>
+          </div>
+          <div style="background: rgba(20,20,20,.68); border: 1px solid rgba(255,255,255,.08); border-radius: 22px; padding: 24px; text-align: center; backdrop-filter: blur(18px);">
+            <strong style="font-size: clamp(28px, 3.5vw, 44px); color: var(--gold); display: block; font-weight: 800;">5000+</strong>
+            <span style="display: block; color: #aaa; font-weight: 800; font-size: 13px; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.05em;">Brands Served Globally</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Top Brands Choose Billion Flex Section -->
+    <section class="partnership-pillars section-pad reveal" style="background: #000000; border-bottom: 1px solid var(--line);">
+      <div class="about-impact-wrap">
+        <div class="about-section-title" style="text-align: center; margin-bottom: 48px;">
+          <span class="eyebrow" style="color: var(--gold); justify-content: center; display: inline-flex;"><span></span> Value Delivery</span>
+          <h2 style="font-size: clamp(30px, 4vw, 48px); font-weight: 900; color: #fff; margin-top: 10px;">Why Major Brands Partner With Us</h2>
+          <p style="color: #a0a0a0; margin-top: 14px; font-size: 16px; max-width: 640px; margin-left: auto; margin-right: auto; line-height: 1.6;">We combine high-volume production scale with strict quality testing to ensure every carrier bag and labels system is flawless.</p>
+        </div>
+        <div class="premium-grid" style="gap: 24px;">
+          <article class="premium-card tilt-card" style="position: relative; border: 1px solid var(--line); background: var(--white); border-radius: var(--radius); padding: 36px 28px; box-shadow: var(--shadow-soft); transition: transform 0.45s var(--ease), border-color 0.45s var(--ease), box-shadow 0.45s var(--ease);">
+            <div class="why-choose-icon" style="width: 50px; height: 50px; display: grid; place-items: center; border-radius: 18px; background: rgba(255,210,0,.12); border: 1px solid rgba(255,210,0,.25); color: var(--gold); margin-bottom: 24px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 24px; height: 24px;"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 16.8 6.1 20l1.2-6.5L2.5 8.9 9.1 8 12 2z"/></svg>
+            </div>
+            <h3 style="font-size: 22px; color: #fff; margin-bottom: 12px; font-weight: 800; font-family: var(--font-head);">Uncompromising Quality</h3>
+            <p style="color: #a0a0a0; font-size: 15px; line-height: 1.6;">Every batch of packaging goes through rigorous testing for tensile strength, seal durability, and exact color matching.</p>
+          </article>
+          <article class="premium-card tilt-card" style="position: relative; border: 1px solid var(--line); background: var(--white); border-radius: var(--radius); padding: 36px 28px; box-shadow: var(--shadow-soft); transition: transform 0.45s var(--ease), border-color 0.45s var(--ease), box-shadow 0.45s var(--ease);">
+            <div class="why-choose-icon" style="width: 50px; height: 50px; display: grid; place-items: center; border-radius: 18px; background: rgba(255,210,0,.12); border: 1px solid rgba(255,210,0,.25); color: var(--gold); margin-bottom: 24px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 24px; height: 24px;"><path d="M13 2L3 14h8l-1 8 11-13h-8l0-7z"/></svg>
+            </div>
+            <h3 style="font-size: 22px; color: #fff; margin-bottom: 12px; font-weight: 800; font-family: var(--font-head);">Fast Scale Production</h3>
+            <p style="color: #a0a0a0; font-size: 15px; line-height: 1.6;">Powered by our high-speed flexographic and rotogravure presses, we match high-volume demands with precise print quality.</p>
+          </article>
+          <article class="premium-card tilt-card" style="position: relative; border: 1px solid var(--line); background: var(--white); border-radius: var(--radius); padding: 36px 28px; box-shadow: var(--shadow-soft); transition: transform 0.45s var(--ease), border-color 0.45s var(--ease), box-shadow 0.45s var(--ease);">
+            <div class="why-choose-icon" style="width: 50px; height: 50px; display: grid; place-items: center; border-radius: 18px; background: rgba(255,210,0,.12); border: 1px solid rgba(255,210,0,.25); color: var(--gold); margin-bottom: 24px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 24px; height: 24px;"><path d="M21 3s-7.5-.5-12 4-4 12-4 12 7.5.5 12-4 4-12 4-12z"/><path d="M4 20c5-6 9-9 15-15"/></svg>
+            </div>
+            <h3 style="font-size: 22px; color: #fff; margin-bottom: 12px; font-weight: 800; font-family: var(--font-head);">Eco-Forward Materials</h3>
+            <p style="color: #a0a0a0; font-size: 15px; line-height: 1.6;">We lead the printing industry in high-strength FSC-certified kraft bags and recyclable mono-layer polymers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta section-pad reveal" style="background: #050505; border-bottom: 1px solid var(--line);">
+      <div class="service-card reveal" style="max-width: 1200px; margin: auto; text-align: center; min-height: auto; padding: 60px 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div class="service-copy" style="max-width: 760px; margin: auto;">
+          <span class="eyebrow" style="color: var(--gold); justify-content: center; display: inline-flex; margin-bottom: 20px;"><span></span> Partner With Us</span>
+          <h2 style="font-size: clamp(28px, 4vw, 46px); font-weight: 900; color: #fff; line-height: 1.2; font-family: var(--font-head);">Let's Elevate Your Brand's Packaging</h2>
+          <p style="color: #cfcfcf; line-height: 1.7; margin: 20px 0 30px; font-size: 16px;">Whether you're looking for high-strength shopping carriers, secure courier mailing envelopes, or 360-degree contoured bottle labels, our team is ready to deliver.</p>
+          <a href="contact.html" class="btn btn-dark magnetic" style="padding: 16px 36px; font-size: 15px; border-radius: 999px;"><span>Get Custom Quote</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer professional-footer" style="border-top: 1px solid var(--line);">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="images and videos/new logo.png" alt="Billion Flex Logo" />
+        <p>Billion Flex delivers innovative, high-quality packaging solutions with a focus on technology,
+          sustainability, and excellence.</p>
+        <div class="social-links" style="margin-top: 16px;">
+          <a class="social-link" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><span
+              data-icon="facebook"></span></a>
+          <a class="social-link" href="https://instagram.com" target="_blank" rel="noopener"
+            aria-label="Instagram"><span data-icon="instagram"></span></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a class="footer-link" href="index.html#home"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg></span>Homepage</a>
+        <a class="footer-link" href="about.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg></span>About Us</a>
+        <a class="footer-link" href="products.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m7.5 4.27 9 5.15" />
+              <path
+                d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+              <path d="m3.3 7 8.7 5 8.7-5" />
+              <path d="M12 22V12" />
+            </svg></span>Products</a>
+        <a class="footer-link" href="clients.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg></span>Clients</a>
+        <a class="footer-link" href="contact.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m22 2-7 20-4-9-9-4Z" />
+              <path d="M22 2 11 13" />
+            </svg></span>Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a class="footer-link" href="paper-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+              <path d="M3 6h18" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg></span>Paper Bags</a>
+        <a class="footer-link" href="plastic-shopping-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 7 13.5 15.5 8.5 10.5 1 17" />
+              <polyline points="17 7 23 7 23 13" />
+            </svg></span>Plastic Shopping Bags</a>
+        <a class="footer-link" href="courier-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+            </svg></span>Courier Bags</a>
+        <a class="footer-link" href="shrink-sleeves-labels.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2c0 4-4 6-4 10a4 4 0 0 0 8 0c0-4-4-6-4-10z" />
+              <path d="M12 12c-1 2-1 3 0 5" />
+            </svg></span>Shrink Sleeves Labels</a>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <a class="footer-link" href="tel:0008888999"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg></span>000 8888 999</a>
+        <a class="footer-link" href="mailto:billionflex@gmail.com"><span class="footer-link-icon"
+            aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <path d="m22 6-10 7L2 6" />
+            </svg></span>billionflex@gmail.com</a>
+        <div class="footer-line"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></span><span>54/1-B,54/1-C, Yashkamal Industrial Estate, Baska-Tajpura Road, Village: Panelav, Taluka:
+            Halol, Dist: Panchmahal - 389350, Gujarat, India</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Billion Flex. All rights reserved.</p>
+      <p>Design by Technomantra India</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

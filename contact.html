@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Billion Flex</title>
+  <meta name="description"
+    content="Contact Billion Flex for custom printing and packaging solutions. Inquire about our paper bags, plastic shopping bags, courier bags, and labels." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-page-hero {
+      padding: 180px max(24px, calc((100vw - 1500px)/2)) 80px;
+      background: linear-gradient(180deg, #070707 0%, #000 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .contact-grid-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .contact-details-column {
+      position: sticky;
+      top: 140px;
+    }
+    .contact-details-column h1 {
+      font-size: clamp(38px, 4vw, 56px);
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .contact-details-column p.subtitle {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #a0a0a0;
+      margin-bottom: 40px;
+    }
+    .map-container {
+      margin-top: 40px;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      height: 300px;
+      background: #111;
+      box-shadow: var(--shadow-soft);
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: invert(90%) hue-rotate(180deg) contrast(120%);
+    }
+    @media (max-width: 968px) {
+      .contact-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .contact-details-column {
+        position: relative;
+        top: auto;
+      }
+    }
+  </style>
+</head>
+
+<body class="contact-page-view">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="preloader" aria-hidden="true">
+    <div class="loader-mark">BF</div>
+    <p>Billion Flex is loading</p>
+  </div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar">
+      <a class="brand" href="index.html#top" aria-label="Billion Flex Home">
+        <img src="images and videos/new logo.png" alt="Billion Flex Logo" />
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-menu">
+        <a href="index.html#home">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Products</a>
+        <a href="clients.html">Clients</a>
+        <a href="contact.html" class="active">Contact Us</a>
+      </div>
+      <a class="btn btn-dark nav-cta magnetic" href="contact.html"><span>Contact Us</span></a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="contact-page-hero">
+      <div class="contact-grid-layout">
+        <!-- Details & Map -->
+        <div class="contact-details-column reveal">
+          <span class="eyebrow" style="color: var(--gold);"><span></span> Connect With Us</span>
+          <h1>Let's Start a Project</h1>
+          <p class="subtitle">Reach out to our sales and packaging consultants. We are ready to help customize, engineer, and manufacture your perfect branding carrier system.</p>
+          
+          <div class="contact-lines" style="margin-top: 0;">
+            <a href="tel:0008888999"><span class="contact-line-icon" aria-hidden="true"><svg
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg></span><span class="contact-line-text">000 8888 999</span></a>
+            <a href="mailto:billionflex@gmail.com"><span class="contact-line-icon" aria-hidden="true"><svg
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <path d="m22 6-10 7L2 6" />
+                </svg></span><span class="contact-line-text">billionflex@gmail.com</span></a>
+            <span class="contact-line-row"><span class="contact-line-icon" aria-hidden="true"><svg
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg></span><span class="contact-line-text">54/1-B,54/1-C, Yashkamal Industrial Estate, Baska-Tajpura Road, Village: Panelav, Taluka: Halol, Dist: Panchmahal - 389350, Gujarat, India</span></span>
+          </div>
+
+          <div class="map-container reveal delay-1">
+            <!-- Google Maps Embed of Halol, Gujarat -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.1256317208154!2d73.53507567605663!3d22.42429423851505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3960efd4b1a45ab7%3A0x6b1069fffa840612!2sYashkamal%20Industrial%20Estate!5e0!3m2!1sen!2sin!4v1716912345678!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="contact-form-column reveal delay-1">
+          <div class="inquiry-form" style="width: 100%; max-width: none;">
+            <h2 style="font-size: 28px; margin-bottom: 20px; color: #fff;">Inquire Now</h2>
+            <form class="inquiry-form-actual" style="display: grid; gap: 20px;">
+              <label><span class="field-label"><span class="inquiry-field-icon"
+                      aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                      </svg></span>Name</span><input type="text" name="name" placeholder="Your name"
+                    required style="border: 1px solid rgba(255,255,255,.1); background:#0a0a0a; color:#fff; border-radius:16px; padding:14px 15px; outline:none; transition:.25s; cursor:text;"></label>
+              
+              <label><span class="field-label"><span class="inquiry-field-icon" aria-hidden="true"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <path d="m22 6-10 7L2 6" />
+                      </svg></span>Email</span><input type="email" name="email" placeholder="you@example.com"
+                    required style="border: 1px solid rgba(255,255,255,.1); background:#0a0a0a; color:#fff; border-radius:16px; padding:14px 15px; outline:none; transition:.25s; cursor:text;"></label>
+              
+              <label><span class="field-label"><span class="inquiry-field-icon" aria-hidden="true"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                      </svg></span>Phone</span><input type="tel" name="phone" placeholder="Your phone number"
+                    required style="border: 1px solid rgba(255,255,255,.1); background:#0a0a0a; color:#fff; border-radius:16px; padding:14px 15px; outline:none; transition:.25s; cursor:text;"></label>
+              
+              <label><span class="field-label"><span class="inquiry-field-icon" aria-hidden="true"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+                      </svg></span>Requirement</span><textarea name="message" rows="4"
+                    placeholder="Tell us about your packaging requirement" required style="border: 1px solid rgba(255,255,255,.1); background:#0a0a0a; color:#fff; border-radius:16px; padding:14px 15px; outline:none; transition:.25s; cursor:text;"></textarea></label>
+              
+              <button class="btn btn-dark magnetic" type="submit" style="justify-self: start; width: auto; padding: 14px 32px;">Send Inquiry</button>
+              <p class="form-note" aria-live="polite" style="margin-top: 10px; font-weight: 800; color: var(--gold);"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer professional-footer" style="border-top: 1px solid var(--line);">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="images and videos/new logo.png" alt="Billion Flex Logo" />
+        <p>Billion Flex delivers innovative, high-quality packaging solutions with a focus on technology,
+          sustainability, and excellence.</p>
+        <div class="social-links" style="margin-top: 16px;">
+          <a class="social-link" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><span
+              data-icon="facebook"></span></a>
+          <a class="social-link" href="https://instagram.com" target="_blank" rel="noopener"
+            aria-label="Instagram"><span data-icon="instagram"></span></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a class="footer-link" href="index.html#home"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg></span>Homepage</a>
+        <a class="footer-link" href="about.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg></span>About Us</a>
+        <a class="footer-link" href="products.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m7.5 4.27 9 5.15" />
+              <path
+                d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+              <path d="m3.3 7 8.7 5 8.7-5" />
+              <path d="M12 22V12" />
+            </svg></span>Products</a>
+        <a class="footer-link" href="clients.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg></span>Clients</a>
+        <a class="footer-link" href="contact.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m22 2-7 20-4-9-9-4Z" />
+              <path d="M22 2 11 13" />
+            </svg></span>Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a class="footer-link" href="paper-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+              <path d="M3 6h18" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg></span>Paper Bags</a>
+        <a class="footer-link" href="plastic-shopping-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 7 13.5 15.5 8.5 10.5 1 17" />
+              <polyline points="17 7 23 7 23 13" />
+            </svg></span>Plastic Shopping Bags</a>
+        <a class="footer-link" href="courier-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+            </svg></span>Courier Bags</a>
+        <a class="footer-link" href="shrink-sleeves-labels.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2c0 4-4 6-4 10a4 4 0 0 0 8 0c0-4-4-6-4-10z" />
+              <path d="M12 12c-1 2-1 3 0 5" />
+            </svg></span>Shrink Sleeves Labels</a>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <a class="footer-link" href="tel:0008888999"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg></span>000 8888 999</a>
+        <a class="footer-link" href="mailto:billionflex@gmail.com"><span class="footer-link-icon"
+            aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <path d="m22 6-10 7L2 6" />
+            </svg></span>billionflex@gmail.com</a>
+        <div class="footer-line"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></span><span>54/1-B,54/1-C, Yashkamal Industrial Estate, Baska-Tajpura Road, Village: Panelav, Taluka:
+            Halol, Dist: Panchmahal - 389350, Gujarat, India</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Billion Flex. All rights reserved.</p>
+      <p>Design by Technomantra India</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const contactForm = document.querySelector('.inquiry-form-actual');
+    const formNote = document.querySelector('.form-note');
+    contactForm?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      formNote.textContent = 'Thank you! Your inquiry is ready. Connect this form to email, WhatsApp, or a backend API to receive submissions.';
+      contactForm.reset();
+    });
+  </script>
+</body>
+
+</html>

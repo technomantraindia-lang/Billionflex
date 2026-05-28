@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courier Bags - Billion Flex</title>
+  <meta name="description"
+    content="Tamper-evident, highly secure custom printed courier bags by Billion Flex. Designed with permanent adhesive seals for safe e-commerce shipping." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .product-detail-hero {
+      position: relative;
+      padding: 180px max(24px, calc((100vw - 1500px)/2)) 80px;
+      background: linear-gradient(180deg, #070707 0%, #000 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .product-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .product-visual-wrapper {
+      position: sticky;
+      top: 140px;
+      border-radius: 40px;
+      background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.08), transparent 70%), var(--white);
+      border: 1px solid var(--line);
+      padding: 48px;
+      box-shadow: var(--shadow);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 480px;
+      overflow: hidden;
+      transform-style: preserve-3d;
+    }
+    .product-visual-wrapper img {
+      max-height: 400px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 24px 38px rgba(0,0,0,0.5));
+      transition: transform 0.6s var(--ease);
+    }
+    .product-visual-wrapper:hover img {
+      transform: scale(1.05) rotate(-2deg);
+    }
+    .product-info-panel h1 {
+      font-size: clamp(38px, 4vw, 56px);
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .product-tag {
+      display: inline-flex;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: #f59e0b;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .product-description {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #cfcfcf;
+      margin-bottom: 36px;
+    }
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .specs-table tr {
+      border-bottom: 1px solid var(--line);
+    }
+    .specs-table tr:last-child {
+      border-bottom: none;
+    }
+    .specs-table td {
+      padding: 16px 24px;
+      font-size: 15px;
+    }
+    .specs-table td.spec-name {
+      font-weight: 800;
+      color: #a0a0a0;
+      width: 35%;
+      border-right: 1px solid var(--line);
+    }
+    .specs-table td.spec-val {
+      color: #fff;
+      font-weight: 500;
+    }
+    .features-list-wrapper {
+      margin-bottom: 48px;
+    }
+    .features-list-wrapper h3 {
+      font-size: 22px;
+      color: #fff;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+    .custom-features-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .custom-features-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: #cfcfcf;
+      font-weight: 600;
+    }
+    .custom-features-list li svg {
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .cta-panel {
+      padding: 40px;
+      border-radius: 30px;
+      background: radial-gradient(circle at 100% 0%, rgba(255,210,0,0.06), transparent 70%), var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+    .cta-panel h3 {
+      font-size: 26px;
+      color: #fff;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .cta-panel p {
+      color: #a0a0a0;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 968px) {
+      .product-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .product-visual-wrapper {
+        position: relative;
+        top: auto;
+        min-height: 360px;
+        padding: 32px;
+      }
+      .custom-features-list {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .specs-table td {
+        padding: 12px 14px;
+        font-size: 13px;
+      }
+      .specs-table td.spec-name {
+        width: 40%;
+      }
+      .cta-panel {
+        padding: 24px 18px;
+        border-radius: 20px;
+      }
+      .product-detail-hero {
+        padding-top: 130px;
+        padding-bottom: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body class="product-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="preloader" aria-hidden="true">
+    <div class="loader-mark">BF</div>
+    <p>Billion Flex is loading</p>
+  </div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar">
+      <a class="brand" href="index.html#top" aria-label="Billion Flex Home">
+        <img src="images and videos/new logo.png" alt="Billion Flex Logo" />
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-menu">
+        <a href="index.html#home">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html" class="active">Our Products</a>
+        <a href="clients.html">Clients</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <a class="btn btn-dark nav-cta magnetic" href="contact.html"><span>Contact Us</span></a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="product-detail-hero">
+      <div class="product-detail-grid">
+        <!-- Visual Section -->
+        <div class="product-visual-wrapper reveal tilt-card">
+          <img src="images and videos/product coureir.png" alt="Billion Flex Courier Bags" />
+        </div>
+
+        <!-- Info Section -->
+        <div class="product-info-panel reveal delay-1">
+          <span class="product-tag">Secure Transit</span>
+          <h1>Courier Bags</h1>
+          <p class="product-description">
+            Ensure secure deliveries with tamper-evident courier mailing bags. Co-extruded from multi-layered LDPE films with a black inner surface for absolute confidentiality, our mailing bags protect shipments against moisture, dirt, and unauthorized access.
+          </p>
+
+          <!-- Specifications Table -->
+          <table class="specs-table">
+            <tbody>
+              <tr>
+                <td class="spec-name">Material Options</td>
+                <td class="spec-val">Co-extruded LDPE/LLDPE Multi-layer film (Opaque black interior, customizable white/gray exterior)</td>
+              </tr>
+              <tr>
+                <td class="spec-name">Thickness Range</td>
+                <td class="spec-val">40 Microns to 100 Microns</td>
+              </tr>
+              <tr>
+                <td class="spec-name">Seal Security</td>
+                <td class="spec-val">Permanent hot-melt adhesive self-sealing flap (Once closed, cannot be opened without tearing)</td>
+              </tr>
+              <tr>
+                <td class="spec-name">Special Options</td>
+                <td class="spec-val">Invoice POD Jacket/Pocket, Bubble-lined interior, Dual seal adhesive tape, Tear strip</td>
+              </tr>
+              <tr>
+                <td class="spec-name">Security Features</td>
+                <td class="spec-val">Sequential serial numbering, Barcode integration, Custom security print edge seals</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Feature Highlights -->
+          <div class="features-list-wrapper">
+            <h3>Key Advantages</h3>
+            <ul class="custom-features-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Tamper-Evident Security Seals
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Moisture & Dust Resistant Barrier
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                High Tensile & Tear Resistance
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Custom High-Impact Brand Printing
+              </li>
+            </ul>
+          </div>
+
+          <!-- CTA Panel -->
+          <div class="cta-panel">
+            <h3>Request a Custom Quote</h3>
+            <p>Get in touch with our packaging consultants to configure your custom size, material, and graphic printing requirements.</p>
+            <a href="contact.html" class="btn btn-dark magnetic" style="width: auto;">Configure & Inquire</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer professional-footer" style="border-top: 1px solid var(--line);">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="images and videos/new logo.png" alt="Billion Flex Logo" />
+        <p>Billion Flex delivers innovative, high-quality packaging solutions with a focus on technology,
+          sustainability, and excellence.</p>
+        <div class="social-links" style="margin-top: 16px;">
+          <a class="social-link" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><span
+              data-icon="facebook"></span></a>
+          <a class="social-link" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><span
+              data-icon="instagram"></span></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a class="footer-link" href="index.html#home"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg></span>Homepage</a>
+        <a class="footer-link" href="about.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg></span>About Us</a>
+        <a class="footer-link" href="products.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m7.5 4.27 9 5.15" />
+              <path
+                d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+              <path d="m3.3 7 8.7 5 8.7-5" />
+              <path d="M12 22V12" />
+            </svg></span>Products</a>
+        <a class="footer-link" href="clients.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg></span>Clients</a>
+        <a class="footer-link" href="contact.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m22 2-7 20-4-9-9-4Z" />
+              <path d="M22 2 11 13" />
+            </svg></span>Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a class="footer-link" href="paper-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+              <path d="M3 6h18" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg></span>Paper Bags</a>
+        <a class="footer-link" href="plastic-shopping-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 7 13.5 15.5 8.5 10.5 1 17" />
+              <polyline points="17 7 23 7 23 13" />
+            </svg></span>Plastic Shopping Bags</a>
+        <a class="footer-link" href="courier-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+            </svg></span>Courier Bags</a>
+        <a class="footer-link" href="shrink-sleeves-labels.html"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2c0 4-4 6-4 10a4 4 0 0 0 8 0c0-4-4-6-4-10z" />
+              <circle cx="12" cy="12" r="10"></circle>
+            </svg></span>Shrink Sleeves Labels</a>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <a class="footer-link" href="tel:0008888999"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg></span>000 8888 999</a>
+        <a class="footer-link" href="mailto:billionflex@gmail.com"><span class="footer-link-icon"
+            aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <path d="m22 6-10 7L2 6" />
+            </svg></span>billionflex@gmail.com</a>
+        <div class="footer-line"><span class="footer-link-icon" aria-hidden="true"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></span><span>54/1-B,54/1-C, Yashkamal Industrial Estate, Baska-Tajpura Road, Village: Panelav, Taluka:
+            Halol, Dist: Panchmahal - 389350, Gujarat, India</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Billion Flex. All rights reserved.</p>
+      <p>Design by Technomantra India</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

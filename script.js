@@ -159,6 +159,18 @@ if (window.matchMedia('(pointer: fine)').matches) {
   });
 }
 
+// Products showroom (products.html)
+const showroom = $('[data-showroom]');
+if (showroom) {
+  const tabs = $$('[data-showroom-tab]', showroom);
+  const panels = $$('[data-showroom-panel]', showroom);
+  const setActive = (key) => {
+    tabs.forEach(tab => tab.classList.toggle('active', tab.dataset.showroomTab === key));
+    panels.forEach(panel => panel.classList.toggle('is-active', panel.dataset.showroomPanel === key));
+  };
+  tabs.forEach(tab => tab.addEventListener('click', () => setActive(tab.dataset.showroomTab)));
+}
+
 const accordionItems = $$('.accordion-item');
 const sliderImages = $$('.slider-track img');
 const sliderDots = $$('.slider-dots button');
