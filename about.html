@@ -29,12 +29,19 @@
       <a class="brand" href="index.html#top" aria-label="Billion Flex Home">
         <img src="images and videos/new logo.png" alt="Billion Flex Logo" />
       </a>
-      <button class="nav-toggle" aria-label="Open navigation"
-        aria-expanded="false"><span></span><span></span><span></span></button>
+            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <div class="nav-menu">
         <a href="index.html#home">Home</a>
-        <a href="about.html" class="active">About Us</a>
-        <a href="products.html">Our Products</a>
+        <a href="about.html">About Us</a>
+        <div class="nav-dropdown">
+          <a href="products.html" class="nav-dropdown-toggle">Our Products <span class="nav-caret">&#9662;</span></a>
+          <div class="nav-dropdown-menu">
+            <a href="plastic-shopping-bags.html">Plastic Shopping Bags</a>
+            <a href="courier-bags.html">Courier Bags</a>
+            <a href="paper-bags.html">Paper Bags</a>
+            <a href="shrink-sleeves-labels.html">Shrink Sleeves Labels</a>
+          </div>
+        </div>
         <a href="clients.html">Clients</a>
         <a href="contact.html">Contact Us</a>
       </div>
@@ -47,7 +54,7 @@
       <div class="about-hero-bg-lines" aria-hidden="true"></div>
       <div class="about-hero-glow about-hero-glow-one" aria-hidden="true"></div>
       <div class="about-hero-glow about-hero-glow-two" aria-hidden="true"></div>
-      <img class="about-hero-image" src="images and videos/about hero .png" alt="Billion Flex creative packaging showcase" />
+      <img class="about-hero-image" src="images and videos/newing about image.png" alt="Billion Flex creative packaging showcase" />
       <div class="about-hero-overlay" aria-hidden="true"></div>
     </section>
 
@@ -100,7 +107,7 @@
 
     <section class="showcase section-pad about-infrastructure" id="infrastructure">
       <div class="showcase-gallery reveal about-showcase-image-wrap">
-        <img class="gallery-main about-showcase-image" src="images and videos/machine .png" alt="Billion Flex Advanced Manufacturing Infrastructure" />
+        <img class="gallery-main about-showcase-image" src="images and videos/machine.png" alt="Billion Flex Advanced Manufacturing Infrastructure" />
       </div>
       <div class="showcase-copy reveal delay-1">
         <p class="eyebrow"><span></span> Infrastructure</p>
@@ -118,32 +125,29 @@
       <div class="why-choose-head reveal">
         <p class="eyebrow"><span></span> Why Choose Us</p>
         <h2>Empowering Brands with Innovation and Trust</h2>
-        <p>At Billion Flex, we go beyond packaging — we create solutions that make your brand stand out. Our commitment to
-          quality, creativity, and customer satisfaction ensures every project we deliver meets the highest standards of
-          excellence.</p>
+        <p>At Billion Flex, we go beyond packaging to deliver dependable quality and strong branding impact. We have big printing machines and a skilled production team to handle high-volume orders with consistent output.</p>
       </div>
-      <div class="why-choose-grid">
-        <div class="why-choose-points reveal">
-          <article class="why-choose-point">
-            <span class="why-choose-icon" data-icon="quality" aria-hidden="true"></span>
-            <b>Proven Reliability</b>
-          </article>
-          <article class="why-choose-point">
-            <span class="why-choose-icon" data-icon="print" aria-hidden="true"></span>
-            <b>Innovative Designs</b>
-          </article>
-          <article class="why-choose-point">
-            <span class="why-choose-icon" data-icon="eco" aria-hidden="true"></span>
-            <b>Global Expertise</b>
-          </article>
-          <article class="why-choose-point">
-            <span class="why-choose-icon" data-icon="speed" aria-hidden="true"></span>
-            <b>Custom Solutions</b>
-          </article>
-        </div>
-        <div class="why-choose-media reveal delay-1">
-          <img src="images and videos/machine .png" alt="Billion Flex manufacturing capability" />
-        </div>
+      <div class="why-choose-points reveal" style="grid-template-columns: repeat(4, 1fr); max-width: 1400px; margin: 0 auto;">
+        <article class="why-choose-point">
+          <span aria-hidden="true" style="font-size:1.8rem; color:#f59e0b; display:block; text-align:center; margin-bottom:8px;">⭐⭐⭐⭐⭐</span>
+          <b>Proven Reliability</b>
+          <small style="color:#bdbdbd; font-size:13px; text-align:center; line-height:1.5; margin-top:6px;">Consistent, on-time delivery backed by rigorous quality assurance and dependable production capacity.</small>
+        </article>
+        <article class="why-choose-point">
+          <span class="why-choose-icon" data-icon="print" aria-hidden="true"></span>
+          <b>Innovative Designs</b>
+          <small style="color:#bdbdbd; font-size:13px; text-align:center; line-height:1.5; margin-top:6px;">Creative layout techniques and structural options designed to maximize on-shelf brand impact.</small>
+        </article>
+        <article class="why-choose-point">
+          <span aria-hidden="true" style="font-size:1.8rem; display:block; text-align:center; margin-bottom:8px;">🌍</span>
+          <b>Global Expertise</b>
+          <small style="color:#bdbdbd; font-size:13px; text-align:center; line-height:1.5; margin-top:6px;">Serving international markets with export-grade barrier packaging and global logistics compliance.</small>
+        </article>
+        <article class="why-choose-point">
+          <span class="why-choose-icon" data-icon="speed" aria-hidden="true"></span>
+          <b>Custom Solutions</b>
+          <small style="color:#bdbdbd; font-size:13px; text-align:center; line-height:1.5; margin-top:6px;">Tailored packaging formats, finishes, and sizes to match any brand identity and volume requirement.</small>
+        </article>
       </div>
     </section>
 
@@ -227,9 +231,14 @@
           <div class="history-luxe-card"><h3>2010</h3><p>Acquired and installed state-of-art 9-color and 10-color roto gravure printing presses.</p></div>
           <span class="history-luxe-icon" aria-hidden="true"></span>
         </article>
+        <article class="history-luxe-row left reveal reveal-left">
+          <span class="history-luxe-icon" aria-hidden="true"></span>
+          <div class="history-luxe-card"><h3>2013</h3><p>Launched tamper-proof courier bags and e-commerce bags as new products.</p></div>
+          <span class="history-luxe-dot" aria-hidden="true"></span>
+        </article>
         <article class="history-luxe-row center reveal reveal-scale">
           <span class="history-luxe-dot" aria-hidden="true"></span>
-          <div class="history-luxe-card"><h3>2015</h3><p>Launch Tamper proof Courier Bags/E-commerce Bags as a new products.</p></div>
+          <div class="history-luxe-card"><h3>2015</h3><p>Launched paper bag manufacturing as a new product line.</p></div>
         </article>
       </div>
     </section>
@@ -295,32 +304,12 @@
       </div>
       <div class="footer-col">
         <h4>Products</h4>
-        <a class="footer-link" href="paper-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-              <path d="M3 6h18" />
-              <path d="M16 10a4 4 0 0 1-8 0" />
-            </svg></span>Paper Bags</a>
-        <a class="footer-link" href="plastic-shopping-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="23 7 13.5 15.5 8.5 10.5 1 17" />
-              <polyline points="17 7 23 7 23 13" />
-            </svg></span>Plastic Shopping Bags</a>
-        <a class="footer-link" href="courier-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
-            </svg></span>Courier Bags</a>
-        <a class="footer-link" href="shrink-sleeves-labels.html"><span class="footer-link-icon" aria-hidden="true"><svg
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2c0 4-4 6-4 10a4 4 0 0 0 8 0c0-4-4-6-4-10z" />
-              <path d="M12 12c-1 2-1 3 0 5" />
-            </svg></span>Shrink Sleeves Labels</a>
+        <a class="footer-link" href="plastic-shopping-bags.html">Plastic Shopping Bags</a>
+        <a class="footer-link" href="courier-bags.html">Courier Bags</a>
+        <a class="footer-link" href="paper-bags.html">Paper Bags</a>
+        <a class="footer-link" href="shrink-sleeves-labels.html">Shrink Sleeves Labels</a>
       </div>
-      <div class="footer-col footer-contact">
+<div class="footer-col footer-contact">
         <h4>Contact</h4>
         <a class="footer-link" href="tel:0008888999"><span class="footer-link-icon" aria-hidden="true"><svg
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

@@ -29,11 +29,19 @@
       <a class="brand" href="index.html#top" aria-label="Billion Flex Home">
         <img src="images and videos/new logo.png" alt="Billion Flex Logo" />
       </a>
-      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <div class="nav-menu">
         <a href="index.html#home">Home</a>
         <a href="about.html">About Us</a>
-        <a href="products.html" class="active">Our Products</a>
+        <div class="nav-dropdown">
+          <a href="products.html" class="nav-dropdown-toggle">Our Products <span class="nav-caret">&#9662;</span></a>
+          <div class="nav-dropdown-menu">
+            <a href="plastic-shopping-bags.html">Plastic Shopping Bags</a>
+            <a href="courier-bags.html">Courier Bags</a>
+            <a href="paper-bags.html">Paper Bags</a>
+            <a href="shrink-sleeves-labels.html">Shrink Sleeves Labels</a>
+          </div>
+        </div>
         <a href="clients.html">Clients</a>
         <a href="contact.html">Contact Us</a>
       </div>
@@ -57,45 +65,22 @@
       <div class="product-filter-container reveal">
         <div class="filter-tabs" role="tablist" aria-label="Product categories">
           <button class="active magnetic" data-filter="all">All Solutions</button>
-          <button class="magnetic" data-filter="paper">Paper Bags</button>
           <button class="magnetic" data-filter="plastic">Plastic Bags</button>
           <button class="magnetic" data-filter="courier">Courier Bags</button>
+          <button class="magnetic" data-filter="paper">Paper Bags</button>
           <button class="magnetic" data-filter="labels">Shrink Sleeves</button>
         </div>
       </div>
 
-      <div class="product-luxe-grid reveal">
-        <!-- Paper Bags -->
-        <article class="product-luxe-card product-card tilt-card" data-category="paper">
-          <a class="product-luxe-link" href="paper-bags.html">
-            <div class="product-luxe-media" style="background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.12), transparent 70%);">
-              <img src="images and videos/paper bag product.png" alt="Paper Bags" />
-            </div>
-            <div class="product-luxe-body">
-              <div class="product-luxe-kicker">01 / ECO-FRIENDLY</div>
-              <h3>Paper Bags</h3>
-              <p>Sustainable elegance for modern retail and corporate branding. Crafted from premium kraft and art paper, optimized for durability and style.</p>
-              <div class="product-luxe-meta">
-                <span>100% Recyclable</span>
-                <span>Premium Handles</span>
-                <span>Kraft & Coated</span>
-              </div>
-              <div class="product-luxe-cta">
-                <span>View Details</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </div>
-            </div>
-          </a>
-        </article>
-
+            <div class="product-luxe-grid reveal">
         <!-- Plastic Shopping Bags -->
         <article class="product-luxe-card product-card tilt-card" data-category="plastic">
           <a class="product-luxe-link" href="plastic-shopping-bags.html">
             <div class="product-luxe-media" style="background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.12), transparent 70%);">
-              <img src="images and videos/product plastic bag.png" alt="Plastic Shopping Bags" />
+              <img src="images and videos/plastic bags product.png" alt="Plastic Shopping Bags" />
             </div>
             <div class="product-luxe-body">
-              <div class="product-luxe-kicker">02 / ROBUST BRANDING</div>
+              <div class="product-luxe-kicker">ROBUST BRANDING</div>
               <h3>Plastic Shopping Bags</h3>
               <p>Vibrant, highly durable retail carrier bags. Designed with advanced co-extrusion technology and printed in up to 10 colors for premium shelf-presence.</p>
               <div class="product-luxe-meta">
@@ -115,10 +100,10 @@
         <article class="product-luxe-card product-card tilt-card" data-category="courier">
           <a class="product-luxe-link" href="courier-bags.html">
             <div class="product-luxe-media" style="background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.12), transparent 70%);">
-              <img src="images and videos/product coureir.png" alt="Courier Bags" />
+              <img src="images and videos/courier product.png" alt="Courier Bags" />
             </div>
             <div class="product-luxe-body">
-              <div class="product-luxe-kicker">03 / SECURE TRANSIT</div>
+              <div class="product-luxe-kicker">SECURE TRANSIT</div>
               <h3>Courier Bags</h3>
               <p>Tamper-proof mailing solutions for modern e-commerce. Heavy-duty co-extruded film with permanent adhesive closures to protect every shipment.</p>
               <div class="product-luxe-meta">
@@ -134,18 +119,41 @@
           </a>
         </article>
 
+        <!-- Paper Bags -->
+        <article class="product-luxe-card product-card tilt-card" data-category="paper">
+          <a class="product-luxe-link" href="paper-bags.html">
+            <div class="product-luxe-media" style="background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.12), transparent 70%);">
+              <img src="images and videos/PAPER PRODUCT.png" alt="Paper Bags" />
+            </div>
+            <div class="product-luxe-body">
+              <div class="product-luxe-kicker">ECO-FRIENDLY</div>
+              <h3>Paper Bags</h3>
+              <p>Sustainable elegance for modern retail and corporate branding. Crafted from premium kraft and art paper, optimized for durability and style.</p>
+              <div class="product-luxe-meta">
+                <span>100% Recyclable</span>
+                <span>Premium Handles</span>
+                <span>Kraft & Coated</span>
+              </div>
+              <div class="product-luxe-cta">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </a>
+        </article>
+
         <!-- Shrink Sleeves Labels -->
         <article class="product-luxe-card product-card tilt-card" data-category="labels">
           <a class="product-luxe-link" href="shrink-sleeves-labels.html">
             <div class="product-luxe-media" style="background: radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.12), transparent 70%);">
-              <img src="images and videos/shrink sleves .png" alt="Shrink Sleeves Labels" />
+              <img src="images and videos/SHRINK PRODUCT.png" alt="Shrink Sleeves Labels" />
             </div>
             <div class="product-luxe-body">
-              <div class="product-luxe-kicker">04 / 360° GRAPHICS</div>
+              <div class="product-luxe-kicker">360° GRAPHICS</div>
               <h3>Shrink Sleeves Labels</h3>
               <p>High-shrink labels that conform seamlessly to complex container geometries. Delivers maximum graphic area and vivid finishes for food, beverage, & cosmetics.</p>
               <div class="product-luxe-meta">
-                <span>360° Visuals</span>
+                <span>360 Visuals</span>
                 <span>Matte & Gloss</span>
                 <span>Fast Lead Time</span>
               </div>
@@ -163,14 +171,12 @@
       <div class="why-choose-head reveal">
         <p class="eyebrow"><span></span> Why Choose Us</p>
         <h2>Empowering Brands with Innovation and Trust</h2>
-        <p>At Billion Flex, we go beyond packaging — we create solutions that make your brand stand out. Our commitment to
-          quality, creativity, and customer satisfaction ensures every project we deliver meets the highest standards of
-          excellence.</p>
+        <p>At Billion Flex, we go beyond packaging to deliver dependable quality and strong branding impact. We have big printing machines and a skilled production team to handle high-volume orders with consistent output.</p>
       </div>
       <div class="why-choose-grid">
         <div class="why-choose-points reveal">
           <article class="why-choose-point">
-            <span class="why-choose-icon" data-icon="quality" aria-hidden="true"></span>
+            <span aria-hidden="true" style="font-size:1.8rem; color:#f59e0b; display:block; text-align:center; margin-bottom:8px;">⭐⭐⭐⭐⭐</span>
             <b>Proven Reliability</b>
           </article>
           <article class="why-choose-point">
@@ -178,16 +184,18 @@
             <b>Innovative Designs</b>
           </article>
           <article class="why-choose-point">
-            <span class="why-choose-icon" data-icon="eco" aria-hidden="true"></span>
+            <span class="why-choose-icon" aria-hidden="true" style="font-size:1.5rem;">🌍</span>
             <b>Global Expertise</b>
           </article>
           <article class="why-choose-point">
             <span class="why-choose-icon" data-icon="speed" aria-hidden="true"></span>
-            <b>Custom Solutions</b>
+            <b>Our Machine</b>
           </article>
         </div>
         <div class="why-choose-media reveal delay-1">
-          <img src="images and videos/machine .png" alt="Billion Flex manufacturing capability" />
+          <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; min-height: 360px;">
+            <source src="images and videos/machine video.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </section>
@@ -257,32 +265,12 @@
       </div>
       <div class="footer-col">
         <h4>Products</h4>
-        <a class="footer-link" href="paper-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-              <path d="M3 6h18" />
-              <path d="M16 10a4 4 0 0 1-8 0" />
-            </svg></span>Paper Bags</a>
-        <a class="footer-link" href="plastic-shopping-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="23 7 13.5 15.5 8.5 10.5 1 17" />
-              <polyline points="17 7 23 7 23 13" />
-            </svg></span>Plastic Shopping Bags</a>
-        <a class="footer-link" href="courier-bags.html"><span class="footer-link-icon" aria-hidden="true"><svg
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
-            </svg></span>Courier Bags</a>
-        <a class="footer-link" href="shrink-sleeves-labels.html"><span class="footer-link-icon" aria-hidden="true"><svg
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2c0 4-4 6-4 10a4 4 0 0 0 8 0c0-4-4-6-4-10z" />
-              <path d="M12 12c-1 2-1 3 0 5" />
-            </svg></span>Shrink Sleeves Labels</a>
+        <a class="footer-link" href="plastic-shopping-bags.html">Plastic Shopping Bags</a>
+        <a class="footer-link" href="courier-bags.html">Courier Bags</a>
+        <a class="footer-link" href="paper-bags.html">Paper Bags</a>
+        <a class="footer-link" href="shrink-sleeves-labels.html">Shrink Sleeves Labels</a>
       </div>
-      <div class="footer-col footer-contact">
+<div class="footer-col footer-contact">
         <h4>Contact</h4>
         <a class="footer-link" href="tel:0008888999"><span class="footer-link-icon" aria-hidden="true"><svg
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -315,4 +303,3 @@
 </body>
 
 </html>
-
