@@ -214,13 +214,55 @@ if (sliderImages.length) {
   }));
 }
 
-const form = $('.inquiry-form');
-const note = $('.form-note');
-form?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  note.textContent = 'Thank you! Your inquiry is ready. Connect this form to email, WhatsApp, or a backend API to receive submissions.';
-  form.reset();
+$$('form.inquiry-form, form.inquiry-form-actual').forEach(formEl => {
+  const noteEl = formEl.querySelector('.form-note');
+  
+  formEl.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (noteEl) {
+      noteEl.textContent = 'Sending your inquiry...';
+      noteEl.style.color = 'var(--gold)';
+    }
+
+    const formData = new FormData(formEl);
+    const object = Object.fromEntries(formData);
+    object.access_key = 'e045bdbc-3b6e-465d-b530-827bb4e2f527';
+    object.subject = 'New Inquiry from Billion Flex Website';
+
+    const json = JSON.stringify(object);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+    .then(async (response) => {
+      let jsonResponse = await response.json();
+      if (response.status === 200) {
+        if (noteEl) {
+          noteEl.textContent = 'Thank you! Your inquiry has been submitted successfully.';
+          noteEl.style.color = '#10b981'; // Success green
+        }
+        formEl.reset();
+      } else {
+        if (noteEl) {
+          noteEl.textContent = jsonResponse.message || 'Something went wrong. Please try again.';
+          noteEl.style.color = '#ef4444'; // Error red
+        }
+      }
+    })
+    .catch(error => {
+      if (noteEl) {
+        noteEl.textContent = 'Network error. Please check your connection and try again.';
+        noteEl.style.color = '#ef4444'; // Error red
+      }
+    });
+  });
 });
+
 
 // Intersection Observer for scroll reveal animations
 const observerOptions = {
@@ -260,4 +302,52 @@ if (historyRows.length) {
   });
 
   historyRows.forEach(row => historyObserver.observe(row));
+}
+
+// Products Hero Carousel Autoplay & Control
+const productsCarousel = $('.products-carousel-container');
+if (productsCarousel) {
+  const slides = $$('.carousel-slide', productsCarousel);
+  const dots = $$('.carousel-dot', productsCarousel);
+  let activeIndex = 0;
+  let carouselInterval;
+
+  const showCarouselSlide = (index) => {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+    activeIndex = index;
+  };
+
+  const nextCarouselSlide = () => {
+    const nextIndex = (activeIndex + 1) % slides.length;
+    showCarouselSlide(nextIndex);
+  };
+
+  const startInterval = () => {
+    carouselInterval = setInterval(nextCarouselSlide, 2000);
+  };
+
+  const stopInterval = () => {
+    clearInterval(carouselInterval);
+  };
+
+  // Add click events to dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      stopInterval();
+      showCarouselSlide(index);
+      startInterval();
+    });
+  });
+
+  // Start autoplay
+  startInterval();
+
+  // Stop on mouse hover, resume on mouse leave
+  productsCarousel.addEventListener('mouseenter', stopInterval);
+  productsCarousel.addEventListener('mouseleave', startInterval);
 }
