@@ -718,6 +718,26 @@
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:20px;
 }
+.why-choose-four-cols {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+@media (max-width: 1024px) {
+  .why-choose-four-cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 640px) {
+  .why-choose-four-cols {
+    grid-template-columns: 1fr !important;
+  }
+}
+.footer-logo-link {
+  display: inline-block;
+  transition: opacity 0.3s var(--ease);
+}
+.footer-logo-link:hover {
+  opacity: 0.85;
+}
 .why-choose-point{
   position:relative;
   display:grid;
