@@ -192,11 +192,7 @@ const setCapabilitiesState = (index) => {
 };
 
 if (accordionItems.length) {
-  const prePressIndex = accordionItems.findIndex(item =>
-    /pre-?press optimization/i.test(item.textContent || '')
-  );
-  const defaultIndex = prePressIndex >= 0 ? prePressIndex : 0;
-  setCapabilitiesState(defaultIndex);
+  setCapabilitiesState(0);
 
   accordionItems.forEach((item, index) => {
     item.addEventListener('click', () => setCapabilitiesState(index));
@@ -205,10 +201,6 @@ if (accordionItems.length) {
 
 if (sliderImages.length) {
   if (!accordionItems.length) showSlide(slideIndex);
-  setInterval(() => {
-    slideIndex = (slideIndex + 1) % sliderImages.length;
-    setCapabilitiesState(slideIndex);
-  }, 2800);
   sliderDots.forEach((dot, index) => dot.addEventListener('click', () => {
     setCapabilitiesState(index);
   }));
