@@ -664,10 +664,6 @@
   .product-luxe-card:hover{border-color:rgba(255,210,0,.30);box-shadow:0 26px 75px rgba(0,0,0,.62)}
   .product-luxe-card:hover::before{opacity:.85}
   .product-luxe-card:hover::after{border-color:rgba(255,210,0,.36)}
-  .product-luxe-card:hover .product-luxe-media img{
-    transform:translateY(-6px) scale(1.07) rotate(-1deg);
-    filter:drop-shadow(0 28px 34px rgba(0,0,0,.55));
-  }
   .product-luxe-card:hover .product-luxe-cta{
     transform:translateY(-2px);
     background:rgba(255,210,0,.16);
@@ -923,11 +919,13 @@
 .about-mission-section {
   background: #030303;
   border-bottom: 1px solid var(--line);
-  padding: 100px max(24px, calc((100vw - 1200px) / 2));
+  padding: 100px max(24px, calc((100vw - 1400px) / 2));
 }
 
 .mission-vision-container {
   width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
 }
 
 .about-mission-section .section-heading.centered {
@@ -1076,7 +1074,7 @@
 .diagram-cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 48px;
+  gap: 28px;
   width: 100%;
   margin-top: 100px;
   position: relative;
@@ -1087,7 +1085,7 @@
   background: rgba(18, 18, 18, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 28px;
-  padding: 40px;
+  padding: 44px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1100,7 +1098,7 @@
 
 .card-header-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
@@ -1608,6 +1606,18 @@
   .slide-image-wrapper img {
     max-height: 360px !important;
   }
+}
+
+/* Homepage showcase layout refinement */
+#expertise.showcase {
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 40px;
+}
+
+#expertise .showcase-copy .eyebrow {
+  white-space: nowrap !important;
+  font-size: clamp(26px, 3vw, 42px) !important;
+  letter-spacing: -0.02em !important;
 }
 
 /* Global Eyebrow and Section Header swap visual hierarchy */
