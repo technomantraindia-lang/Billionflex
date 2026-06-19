@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1.5" />
   <style>
     .product-detail-hero {
       position: relative;
@@ -185,6 +185,36 @@
 
       .custom-features-list {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .product-visual-wrapper {
+        min-height: 280px;
+        padding: 16px;
+      }
+
+      .product-visual-wrapper img {
+        max-height: 240px;
+      }
+
+      .specs-table td {
+        padding: 12px 14px;
+        font-size: 13px;
+      }
+
+      .specs-table td.spec-name {
+        width: 40%;
+      }
+
+      .cta-panel {
+        padding: 24px 18px;
+        border-radius: 20px;
+      }
+
+      .product-detail-hero {
+        padding-top: 130px;
+        padding-bottom: 50px;
       }
     }
   </style>
